@@ -38,7 +38,7 @@
     "prettier": "^1.13.5"
   },
   "dependencies": {
-    "prompts": "^0.1.9",
+    "blessed": "^0.1.81",
     "update-notifier": "^2.5.0"
   }
 }
