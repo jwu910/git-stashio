@@ -2,9 +2,15 @@
   "name": "git-stashio",
   "version": "0.0.1",
   "description": "A git stash CLI tool.",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d build",
+    "build": "gulp build",
+    "prepublishOnly": "npm run build",
     "start": "node index.js",
     "watch": "gulp watch",
     "test": "echo test"
@@ -22,6 +28,10 @@
     "pop",
     "CLI"
   ],
+  "bin": {
+    "gs": "index.js",
+    "gstash": "index.js"
+  },
   "author": "Joshua Wu",
   "license": "MIT",
   "bugs": {
@@ -29,14 +39,15 @@
   },
   "homepage": "https://github.com/jwu910/git-stashio#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-env": "^2.4.1",
-    "babel-polyfill": "^6.26.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.1",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.2.1",
+    "@babel/preset-env": "^7.3.1",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
     "prettier": "^1.13.5"
   },
   "dependencies": {
+    "chalk": "^2.4.2",
     "update-notifier": "^2.5.0"
   }
 }
