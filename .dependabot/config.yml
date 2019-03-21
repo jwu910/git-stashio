@@ -2,15 +2,6 @@ version: 1
 update_configs:
   - package_manager: "javascript"
     directory: "/"
-    default_labels:
-      - "security"
-      - "dependencies"
     target_branch: "development"
     update_schedule: "live"
-    default_assignees:
-      - "@jwu910"
-    default_reviewers:
-      - "@jwu910"
-    allowed_updates:
-      - match:
-          update_type: "security"
+    default_assignees: ["@jwu910"]
